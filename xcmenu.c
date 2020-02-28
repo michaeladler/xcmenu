@@ -13,6 +13,11 @@
 #include <zlib.h>
 #include <xcb/xcb.h>
 
+#if __BSD_VISIBLE
+#include <sys/types.h>
+#include <sys/file.h>
+#endif
+
 #ifdef XCB_UTIL
 #  include <xcb/xcb_util.h>
 #endif
